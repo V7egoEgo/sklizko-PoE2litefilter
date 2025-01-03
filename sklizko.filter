@@ -16,21 +16,11 @@
 # Overrides - Uniques, Valuables
 #--------------------------
 
-Show
-Rarity Unique
-SetTextColor 175 96 37 255
-SetBorderColor 175 96 37 255
-SetBackgroundColor 53 13 13 255
-PlayAlertSound 3 300
-PlayEffect Brown
-MinimapIcon 1 Brown Star
-SetFontSize 40
-CustomAlertSound "Chaos.mp3" 300
-
 ## Divine Orb Style
 Show
 Class "Currency"
-BaseType "Mirror" "Divine" "Perfect Jeweller's Orb"
+BaseType "Mirror of Kalandra" "Perfect Jeweller's Orb" "Greater Jeweller's Orb" "Divine Orb" "Distilled Disgust" "Distilled Despair" "Greater Essence of Torment" "Greater Essence of Ruin" "Greater Essence of Haste" "Greater Essence of Sorcery"
+
 SetFontSize 45
 SetTextColor 255 0 0 255
 SetBorderColor 255 0 0 255
@@ -221,7 +211,7 @@ Rarity <= Magic
 # Currency Tier A: Gemcutter, Annullment
 Show
 Class "Currency"
-BaseType "Orb of Annulment" "Orb of Chance" "Greater Jeweller's Orb" "Distilled Fear" "Distilled Despair"
+BaseType "Orb of Annulment" "Orb of Chance" "Greater Jeweller's Orb" "Distilled Fear"
 SetTextColor 255 255 255 255
 SetBorderColor 255 255 255 255
 SetBackgroundColor 240 90 35
@@ -235,13 +225,12 @@ CustomAlertSound "Chance.mp3"
 Show
 Class "Currency"
 BaseType "Exotic Coinage" "Exalted Orb"
-SetTextColor 255 207 92
-SetBorderColor 255 207 92
-SetBackgroundColor 76 51 12
+SetTextColor 255 255 255 255
+SetBorderColor 255 255 255 255
+SetBackgroundColor 240 90 35 255
 PlayAlertSound 2 300
-PlayEffect Yellow
 MinimapIcon 1 Yellow Circle
-SetFontSize 40
+SetFontSize 35
 CustomAlertSound "Exalt.mp3" 300
 
 Show
@@ -469,14 +458,157 @@ Class "Waystones"
 # Value Rares
 #--------------------------
 
-Show
-Class "Rings" "Amulets" "Belts"
+#Show
+#Class "Rings" "Amulets" "Belts"
+#Rarity Rare
+#SetFontSize 40
+#SetTextColor 233 206 75
+#SetBorderColor 233 206 75
+#PlayEffect Yellow
+#MinimapIcon 1 Yellow Diamond
+
+#===============================================================================================================
+# [[2200]] Endgame - Rare - Accessories
+#===============================================================================================================
+
+Show # t1
+ItemLevel >= 65
 Rarity Rare
-SetFontSize 40
-SetTextColor 233 206 75
-SetBorderColor 233 206 75
-PlayEffect Yellow
-MinimapIcon 1 Yellow Diamond
+Class == "Amulets" "Rings" "Belts" "Charms"
+BaseType == "Bloodstone Amulet" "Solar Amulet" "Lunar Amulet" "Amber Amulet" "Jade Amulet" "Lapis Amulet" "Stellar Amulet" "Gold Amulet" "Gold Ring" "Ruby Ring" "Sapphire Ring" "Topaz Ring" "Amethyst Ring" "Prismatic Ring" "Pearl Ring" "Rawhide Belt" "Utility Belt" "Golden Charm" "Stone Charm" "Thawing Charm" "Dousing Charm" "Antidote Charm"
+SetFontSize 35
+SetBackgroundColor 0 80 30 255
+CustomAlertSound "chancebases.mp3" 300
+
+Show # t2
+ItemLevel >= 65
+Rarity Rare
+Class == "Amulets" "Rings" "Belts" "Charms"
+BaseType == "Amber Amulet" "Jade Amulet" "Lapis Amulet" "Stellar Amulet" "Unset Ring" "Plate Belt" "Mail Belt" "Heavy Belt" "Amethyst Charm" "Silver Charm" "Grounding Charm"
+SetFontSize 35
+SetBackgroundColor 0 40 10 255
+
+Show # t3
+ItemLevel >= 65
+Rarity Rare
+Class == "Amulets" "Rings" "Belts" "Charms"
+BaseType == "Crimson Amulet" "Azure Amulet" "Iron Ring" "Lazuli Ring" "Emerald Ring" "Pearl Ring" "Linen Belt" "Wide Belt" "Long Belt" "Ornate Belt" "Double Belt" "Staunching Charm" "Ruby Charm" "Sapphire Charm" "Topaz Charm"
+SetFontSize 35
+SetBackgroundColor 20 20 0 255
+
+#===============================================================================================================
+# [[2400]] Endgame - Rare - Gear
+#===============================================================================================================
+
+Show # t1
+	ItemLevel >= 65
+	Rarity Rare
+	BaseType == "Expert Intricate Gloves" "Expert Spined Bracers" "Expert Moulded Mitts" "Expert Spiral Wraps" "Expert Feathered Sandals" "Expert Lizardscale Boots" "Expert Stone Greaves" "Expert Hunting Shoes" "Expert Hexer's Robe" "Expert Studded Vest" "Expert Waxed Jacket" "Expert Wayfarer Jacket" "Expert Iron Cuirass" "Expert Scalper's Jacket" "Expert Feathered Tiara" "Expert Hunter Hood" "Expert Elite Greathelm" "Expert Tribal Mask" "Expert Omen Crest Shield" "Expert Stone Tower Shield" "Expert Crystal Focus" "Expert Plumed Focus" "Expert Dualstring Bow" "Expert Forlorn Crossbow" "Expert Slicing Quarterstaff" "Rattling Sceptre" "Attuned Wand" "Siphoning Wand" "Chiming Staff" "Primed Quiver"
+	SetFontSize 35
+	SetBackgroundColor 20 20 0 255
+CustomAlertSound "chancebases.mp3" 300
+
+
+# Show # identifieditemhandling
+	# Mirrored False
+	# Corrupted False
+	# Identified True
+	# ItemLevel >= 65
+	# Rarity Rare
+	# Class == "Body Armours" "Boots" "Gloves" "Helmets" "Bows" "Claws" "Daggers" "Wands" "One Hand Swords" "One Hand Axes" "One Hand Maces" "Sceptres" "Spears" "Flails" "Bows" "Staves" "Two Hand Swords" "Two Hand Axes" "Two Hand Maces" "Quarterstaves" "Crossbows" "Traps" "Quivers" "Shields" "Foci"
+	# SetFontSize 35
+	# SetBorderColor 0 240 190 180
+	# PlayEffect Blue Temp
+
+# Show # remaining t2-t3-t4
+	# ItemLevel >= 65
+	# Rarity Rare
+	# Class == "Body Armours" "Boots" "Gloves" "Helmets" "Bows" "Claws" "Daggers" "Wands" "One Hand Swords" "One Hand Axes" "One Hand Maces" "Sceptres" "Spears" "Flails" "Bows" "Staves" "Two Hand Swords" "Two Hand Axes" "Two Hand Maces" "Quarterstaves" "Crossbows" "Traps" "Quivers" "Shields" "Foci"
+	# SetFontSize 35
+	# SetBackgroundColor 80 80 80 100
+	
+#===============================================================================================================
+# [[2500]] Hide Layer 2 - Rare Gear
+#===============================================================================================================
+
+Hide # raresendgame
+	ItemLevel >= 65
+	Rarity Rare
+	Class "Amulets" "Rings" "Belts" "Charms" "Body Armours" "Boots" "Gloves" "Helmets" "Bows" "Claws" "Daggers" "Wands" "One Hand Swords" "One Hand Axes" "One Hand Maces" "Sceptres" "Spears" "Flails" "Bows" "Staves" "Two Hand Swords" "Two Hand Axes" "Two Hand Maces" "Quarterstaves" "Crossbows" "Traps" "Quivers" "Shields" "Foci"
+	SetFontSize 18
+	SetBorderColor 0 0 0 0
+	SetBackgroundColor 20 20 0 0
+	DisableDropSound True
+	
+#===============================================================================================================
+# [[2600]] Jewels
+#===============================================================================================================
+
+#------------------------------------
+#   [2601] Special Cases
+#------------------------------------
+
+Show # 1modcorrupted
+	Corrupted True
+	AnyEnchantment True
+	Rarity Rare
+	BaseType == "Ruby" "Emerald" "Sapphire" "Time-Lost Ruby" "Time-Lost Emerald" "Time-Lost Sapphire" "Time-Lost Diamond"
+	SetFontSize 35
+	SetTextColor 220 220 0 255
+	SetBorderColor 0 240 190 255
+	SetBackgroundColor 120 120 0 225
+	PlayAlertSound 3 300
+	PlayEffect Blue
+	MinimapIcon 2 Blue Diamond
+
+#------------------------------------
+#   [2604] Time-Lost Jewels
+#------------------------------------
+
+Show # anyrare
+	Rarity Rare
+	BaseType == "Time-Lost Ruby" "Time-Lost Emerald" "Time-Lost Sapphire" "Time-Lost Diamond"
+	SetFontSize 35
+	SetTextColor 220 220 0 255
+	SetBorderColor 220 220 0 255
+	SetBackgroundColor 120 120 0 225
+	PlayEffect Grey Temp
+	MinimapIcon 2 Grey Diamond
+
+
+Show # anymagic
+	Rarity Normal Magic
+	BaseType == "Time-Lost Ruby" "Time-Lost Emerald" "Time-Lost Sapphire" "Time-Lost Diamond"
+	SetFontSize 35
+	SetTextColor 220 220 0 255
+	SetBorderColor 220 220 0 255
+	SetBackgroundColor 120 120 0 225
+	PlayEffect Grey Temp
+	MinimapIcon 2 Grey Diamond
+
+
+#------------------------------------
+#   [2604] Generic Jewels
+#------------------------------------
+
+Show # anyrare
+	Rarity Rare
+	BaseType == "Ruby" "Emerald" "Sapphire"
+	SetFontSize 35
+	SetTextColor 220 220 0 255
+	SetBorderColor 220 220 0 255
+	SetBackgroundColor 120 120 0 225
+	PlayEffect Grey Temp
+	MinimapIcon 2 Grey Diamond
+
+Show # anymagic
+	Rarity Normal Magic
+	BaseType == "Ruby" "Emerald" "Sapphire"
+	SetFontSize 35
+	SetTextColor 0 75 250 255
+	SetBorderColor 0 75 250 255
+	SetBackgroundColor 0 20 40 255
+
 
 #--------------------------
 # Rings, Amulets, Belts
@@ -528,6 +660,133 @@ SetFontSize 35
 # Rarity Magic
 # SetBorderColor 0 0 200
 # SetFontSize 35
+
+#------------------------------------
+#   [4202] Tier 1 and 2 uniques
+#------------------------------------
+
+Show
+Rarity Unique
+BaseType == "Heavy Belt" "Armoured Cap" "Conqueror Plate" "Fine Bracers" "Ornate Belt" "Incense Relic" "Time-Lost Diamond" "Ring" "Chiming Staff" "Utility Belt" "Grand Visage" "Grand Regalia" "Garment" "Furtive Wraps" "Crucible Tower Shield" "Ultimate Life Flask" "Ultimate Mana Flask" "Closed Helm" "Knight Armour" "Wyrm Quarterstaff" "Diamond" "Emerald" "Ruby" "Sapphire" "Timeless Jewel" "Smuggler Coat"
+SetFontSize 40
+SetTextColor 175 96 37 255
+SetBorderColor 175 96 37 255
+SetBackgroundColor 255 255 255 255
+PlayAlertSound 6 300
+PlayEffect Red
+MinimapIcon 0 Red Star
+CustomAlertSound "Divine.mp3" 300
+
+Show
+Rarity Unique
+BaseType == "Burnished Gauntlets" "Felt Cap" "Tribal Mask" "Ironclad Vestments" "Lattice Sandals" "Threaded Shoes" "Lace Hood" "Altar Robe" "Stone Tower Shield" "Velour Shoes" "Grand Manchettes" "Grand Cuisses" "Jewelled Gloves"
+SetFontSize 35
+SetTextColor 255 255 255 255
+SetBorderColor 255 255 255 255
+SetBackgroundColor 175 96 37 255
+PlayAlertSound 1 300
+PlayEffect Red
+MinimapIcon 0 Yellow Star
+CustomAlertSound "Unique.mp3" 300
+
+#------------------------------------
+#   [4203] Exceptions #2
+#------------------------------------
+
+#------------------------------------
+#   [4204] Multi-Unique bases.
+#------------------------------------
+
+Show
+Rarity Unique
+BaseType == "Gold Ring" "Stellar Amulet" "Solar Amulet" "Wide Belt" "Amethyst Ring" "Ruby Ring" "Topaz Ring" "Amber Amulet" "Emerald Ring" "Jade Amulet" "Lazuli Ring" "Sapphire Ring" "Gold Amulet" "Pearl Ring" "Crimson Amulet" "Lapis Amulet" "Rawhide Belt" "Azure Amulet" "Omen Crest Shield" "Chain Tiara" "Linen Wraps" "Silk Robe" "Explorer Armour" "Shrine Sceptre" "Moulded Mitts"
+SetFontSize 35
+SetTextColor 0 0 0 255
+SetBorderColor 120 150 255 255
+SetBackgroundColor 175 96 37 255
+PlayAlertSound 3 300
+PlayEffect Blue
+MinimapIcon 1 Blue Star
+CustomAlertSound "Exalt.mp3" 300
+
+#------------------------------------
+#   [4205] Low tier exceptions
+#------------------------------------
+
+# Show  # %H5 $type->uniques $tier->earlyleague
+	# Rarity Unique
+	# SetFontSize 45
+	# SetTextColor 175 96 37 255
+	# SetBorderColor 175 96 37 255
+	# SetBackgroundColor 10 30 45 255
+	# PlayAlertSound 3 300
+	# PlayEffect Brown
+	# MinimapIcon 2 Brown Star
+CustomAlertSound "Exalt.mp3" 300
+
+Show
+Rarity Unique
+BaseType == "Ruby" "Emerald" "Sapphire" "Diamond" "Time-Lost Diamond"
+SetFontSize 45
+SetTextColor 255 255 255 255
+SetBorderColor 255 255 255 255
+SetBackgroundColor 175 96 37 255
+PlayEffect Red
+MinimapIcon 0 Yellow Star
+CustomAlertSound "Exalt.mp3" 300
+
+	
+#------------------------------------
+#   [4206] Tier 3 uniques 
+#------------------------------------
+
+# Show # %H5 $type->uniques $tier->t3boss
+	# Rarity Unique
+	# BaseType == ""
+	# SetFontSize 45
+	# SetTextColor 175 96 37 255
+	# SetBorderColor 175 96 37 255
+	# SetBackgroundColor 53 13 13 255
+	# PlayEffect Blue
+	# MinimapIcon 2 Blue Star
+	
+Show
+Rarity Unique
+BaseType == "Blazon Crest Shield" "Hermit Garb" "Hardwood Targe" "Pathfinder Coat" "Veiled Mask" "Gold Circlet" "Layered Gauntlets" "Stone Greaves" "Feathered Robe" "Wrapped Greathelm" "Fur Plate" "Goldcast Cuffs" "Rusted Cuirass" "Laced Boots" "Rhoahide Coat" "Leather Vest" "Horned Crown" "Lizardscale Boots" "Engraved Focus" "Chain Mail" "Heavy Crown" "Warrior Greathelm" "Iron Greaves" "Gilded Vestments" "Jingling Crest Shield" "Cultist Crown" "Iron Crown" "Twig Circlet" "Braced Sabatons" "Doubled Gauntlets" "Twig Focus" "Elite Greathelm" "Intricate Gloves" "Splintered Tower Shield" "Stitched Gloves" "Braced Tower Shield" "Scale Mail" "Studded Vest" "Iron Cuirass" "Hunter Hood" "Pilgrim Vestments" "Guarded Helm" "Soldier Greathelm" "Crescent Targe" "Quilted Vest" "Embossed Boots" "Tattered Robe" "Waxed Jacket" "Rope Cuffs" "Vaal Cuirass" "Brimmed Helm" "Firm Bracers" "Rusted Greathelm" "Shaman Mantle" "Mail Vestments" "Sectioned Bracers" "Shabby Hood" "Vagabond Armour" "Visored Helm" "Ringmail Gauntlets" "Full Plate" "Hooded Mask" "Rough Greaves" "Tempered Mitts" "Straw Sandals" "Rampart Tower Shield" "Face Mask" "Feathered Tiara" "Pelage Targe" "Bone Raiment" "Suede Bracers" "Sigil Crest Shield" "Stacked Sabatons" "Torn Gloves" "Cloaked Mail" "Gauze Wraps" "Hunting Shoes" "Keth Raiment" "Serpentscale Coat" "Anchorite Garb" "Emblem Crest Shield" "Tonal Focus" "Aged Cuffs" "Marabout Garb" "Spined Bracers" "Votive Raiment" "Rogue Armour" "Hexer's Robe" "Champion Cuirass" "Wayfarer Jacket" "Wicker Tiara" "Crystal Focus" "Hewn Mask" "Raider Plate" "Bronze Greaves" "Mail Sabatons" "Scout's Vest" "Cowled Helm" "Solid Mask" "Shielded Helm" "Effigial Tower Shield" "Woven Focus" "Spired Greathelm" "Steeltoe Boots" "Maraketh Cuirass" "Trimmed Greaves" "Riveted Mitts" "Martyr Crown" "Beaded Circlet" "Secured Leggings" "Steel Plate" "Wrapped Sandals" "Feathered Sandals" "Painted Tower Shield" "Iron Ring" "Mail Belt" "Plate Belt" "Linen Belt" "Rawhide Belt" "Lunar Amulet" "Fine Belt" "Long Belt" "Bloodstone Amulet" "Broadhead Quiver" "Fire Quiver" "Studded Greatclub" "Wooden Club" "Leaden Greathammer" "Dualstring Bow" "Ashen Staff" "Voltaic Staff" "Volatile Wand" "Omen Sceptre" "Slim Mace" "Felled Greatclub" "Oak Greathammer" "Attuned Wand" "Crescent Quarterstaff" "Makeshift Crossbow" "Steelpoint Quarterstaff" "Long Quarterstaff" "Crumbling Maul" "Shortbow" "Tense Crossbow" "Bone Wand" "Plated Mace" "Recurve Bow" "Gelid Staff" "Wrapped Quarterstaff" "Rattling Sceptre" "Pyrophyte Staff" "Gothic Quarterstaff" "Spiked Club" "Forge Maul" "Crude Bow" "Smithing Hammer" "Tapestry Relic" "Vase Relic" "Coffer Relic" "Sombre Gloves" "Amphora Relic" "Seal Relic" "Visceral Quiver" "Spiritbone Crown" "Torment Club" "Silk Slippers" "Covert Hood"
+SetFontSize 45
+SetTextColor 175 96 37 255
+SetBorderColor 175 96 37 255
+SetBackgroundColor 53 13 13 255
+PlayEffect Brown
+MinimapIcon 2 Brown Star
+CustomAlertSound "Exalt.mp3" 300
+
+
+#------------------------------------
+#   [4207] Tier 4 uniques
+#------------------------------------
+
+# Show # %H3 $type->uniques $tier->hideable2
+	# Rarity Unique
+	# BaseType == ""
+	# SetFontSize 40
+	# SetTextColor 175 96 37 255
+	# SetBorderColor 175 96 37 255
+	# SetBackgroundColor 20 20 0 255
+	# PlayEffect Brown
+	# MinimapIcon 2 Brown Star
+	
+Show
+Rarity Unique
+SetFontSize 45
+SetTextColor 255 0 255 255
+SetBorderColor 255 0 255 255
+SetBackgroundColor 100 0 100 255
+PlayAlertSound 3 300
+PlayEffect Pink
+MinimapIcon 0 Pink Circle
+CustomAlertSound "Exalt.mp3" 300
+
 
 #--------------------------
 # Random Rares
