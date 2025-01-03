@@ -33,12 +33,7 @@ loot filter POE 2 custom voice
 
 ### 5. Audio Tracks
 
-- **Important**: Keep all audio tracks in the game folder. Ensure you have both English and Russian audio tracks available.
-
-### 6. Enjoy!
-
-You're all set! Enjoy your enhanced gaming experience with NeverSinks Litefilter.
-
----
+- **Important**:
+  Save all audio tracks in the filter folder.
 
 **Important**: Ensure you follow these steps carefully to avoid any issues.
